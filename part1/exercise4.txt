@@ -1,0 +1,11 @@
+(base) tuokall@oma:~$ docker exec -it blissful_allen bash
+root@8e8bf648b0db:/usr/app# tail -f ./logs.txt 
+Secret message is:
+"Docker is easy"
+Tue, 29 Dec 2020 12:49:19 GMT
+Tue, 29 Dec 2020 12:49:22 GMT
+Tue, 29 Dec 2020 12:49:25 GMT
+Tue, 29 Dec 2020 12:49:28 GMT
+Secret message is:
+"Docker is easy"
+

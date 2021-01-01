@@ -1,0 +1,6 @@
+docker run -p 81:80 devopsdockeruh/ports_exercise
+
+
+
+
+port 80 was allready in use at my own machine, so I routed the docker to port 81

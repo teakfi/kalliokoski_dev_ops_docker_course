@@ -1,0 +1,19 @@
+(base) tuokall@oma:~$ docker ps -as
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                          PORTS     NAMES              SIZE
+580760fb42f5   nginx     "/docker-entrypoint.…"   2 minutes ago   Exited (0) About a minute ago             zen_black          1.11kB (virtual 133MB)
+4369466eb68f   nginx     "/docker-entrypoint.…"   2 minutes ago   Exited (0) About a minute ago             focused_elgamal    1.11kB (virtual 133MB)
+a38887d513c0   nginx     "/docker-entrypoint.…"   2 minutes ago   Up 2 minutes                    80/tcp    admiring_pasteur   1.12kB (virtual 133MB)
+(base) tuokall@oma:~$ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+nginx        latest    ae2feff98a0c   13 days ago   133MB
+
+container prune + rmi
+
+
+
+(base) tuokall@oma:~$ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+(base) tuokall@oma:~$ docker ps -as
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES     SIZE
+(base) tuokall@oma:~$ 
+
