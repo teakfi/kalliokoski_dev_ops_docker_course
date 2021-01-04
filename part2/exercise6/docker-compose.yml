@@ -1,0 +1,47 @@
+version: '3.5'
+
+services:
+  backend:
+    image: backend
+    environment:
+     - FRONT_URL=http://localhost:5000
+     - REDIS=redis
+     - REDIS_PORT=6379
+     - DB_USERNAME=bend
+     - DB_PASSWORD=bend
+     - DB_NAME=bend
+     - DB_HOST=db
+    ports:
+     - 8000:8000
+    volumes:
+     - ./logs.txt:/mydir/backend-example-docker/logs.txt
+    restart: unless-stopped
+
+  frontend:
+    image: frontend
+    ports:
+     - 5000:5000
+    environment:
+     - API_URL=http://localhost:8000
+
+  redis:
+    image: redis:5
+    ports:
+     - 6379:6379
+    volumes:
+     - ./redis:/data
+
+
+  db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+     - POSTGRES_USER=bend
+     - POSTGRES_PASSWORD=bend
+     - POSTGRES_DB=bend
+    container_name: db_backend
+    volumes:
+      - database:/var/lib/postgresql/data
+
+volumes:
+  database:
